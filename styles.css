@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+html {
+    --teal: rgb(0, 128, 128);
+    --grey: rgb(54, 69, 79);
+    --blue: rgb(51, 102, 153);
+    --font: 'Amiri Quran', serif;
+    --height: 1.75rem;
+}
+
+@media only screen and
+  (min-device-width: 768px) and
+  (max-device-width: 2560px) {
+       .navigation { color : var(--teal);
+              display: inline-block;
+              flex-flow: row nowrap;
+              font-family: var(--font);
+              font-size: .875rem;
+              line-height: var(--height);
+              letter-spacing: 1px;
+              margin: 30px;}
+ul,li.navigation { list-style: none;}
+
+#menu { width: 900px;}
+
+#menu a {background-color: var(--grey);
+         color: var(--teal);
+         display: block;
+         padding: 10px;}
+
+#menu li { display: block;
+           float: left;
+           width: 100px;}
+h1 { color  : var(--blue);
+       font-family: var(--font);
+       font-size: 3rem;
+       line-height: 2.75rem;
+       letter-spacing: 1px;
+       margin: 30px 15px;}
+thead {color : var(--teal);
+       font-family: var(--font);
+       font-size: 1.125rem;
+       line-height: var(--height);
+       letter-spacing: 1px;
+       margin: 30px;}
+tbody {color : var(--grey);
+       font-family: var(--font);
+       font-size: 1rem;
+       line-height: var(--height);
+       letter-spacing: 1px;
+       margin: 30px;}
+h2, h3, h4, h5 {color : var(--grey);
+                font-family: var(--font);
+                font-size: 1.5rem;
+                font-style: italic;
+                line-height: var(--height);
+                text-decoration: underline;
+                letter-spacing: 1px;
+              margin: 30px 0px;}
+ol li::marker {color : var(--teal);}
+ul li::marker {color : var(--teal);
+               font-size: .625rem}
+b {color : var(--teal);
+       font-family: var(--font);}
+p, ol, ul {font-family: var(--font);
+           font-size: 1.125rem;
+           line-height: var(--height);
+           letter-spacing: 1px;
+           margin: 5px;}
+
+.content > img {grid-area: pic;}
+.content > h1 {grid-area: header;}
+.content > p {grid-area: words;}
+.content { display: grid;
+           grid-template-columns: auto;
+           grid-template-rows: auto;
+           grid-template-areas:
+           'header header pic'
+            'words words pic';}
+
+.bottom {display: grid;
+         grid-template-columns: 100%;
+         grid-template-rows: 100%;
+         align-items: center;
+         justify-items: center;}
+
+.filler > img {grid-area: pic;}
+.filler > p.one {grid-area: pone;}
+.filler > p.two {grid-area: ptwo;}
+.filler > p.three {grid-area: pthree;}
+.filler > p.four { grid-area: pfour;}
+.filler {display: grid;
+          grid-template-areas: 
+          "pic pone pthree"
+          "pic ptwo pfour";
+          grid-template-columns: auto;
+          grid-template-rows: auto;}
+
+
+.contact > h1 {grid-area: header;}
+.contact > img { grid-area: picture;}
+.contact > h2,p {grid-area: phone;}
+.contact > h3,p {grid-area: email;}
+.contact { display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: auto;
+           grid-template-areas: 
+           'header header header'
+           '. picture .'
+           'phone . email';
+           justify-items: center;}
+
+.algebra > h2 {grid-area: header1;}
+.algebra > img {grid-area: picture1;}
+.algebra > p {grid-area: descr1;
+              font-size: 1.375rem;}
+.algebra > ul {grid-area: info1;}
+.python > h3 {grid-area: header2;}
+.python > img {grid-area: picture2;}
+.python > p {grid-area: descr2;
+             font-size: 1.375rem;}
+.python > ul {grid-area: info2;}
+.orientation > h4 {grid-area: header3;}
+.orientation > img {grid-area: picture3;}
+.orientation > p {grid-area: descr3;
+                  font-size: 1.375rem;}
+.orientation > ul {grid-area: info3;}
+.algebra { border: .125rem solid var(--teal);
+           display: grid;
+           grid-template-columns: auto;
+           grid-template-rows: auto;
+           grid-template-areas: 
+           'header1 header1 header1'
+           'descr1 . picture1'
+           'info1 . .';
+           margin-bottom: -.125rem;}
+.python { border: .125rem solid var(--teal);
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto;
+          grid-template-areas:
+          'header2 header2 header2'
+          'descr2 . picture2'
+          'info2 . .';
+          margin-bottom: -.125rem;}
+.orientation {border: .125rem solid var(--teal);
+              display: grid;
+              grid-template-columns: auto;
+              grid-template-rows: auto;
+              grid-template-areas:
+              'header3 header3 header3'
+              'descr3 . picture3'
+              'info3 . .';}
+  }
+@media only screen and
+  (min-device-width: 320px) and
+  (max-device-width: 480px) {
+       .navigation { color : var(--teal);
+              display: inline-block;
+              flex-flow: row nowrap;
+              font-family: var(--font);
+              font-size: .875rem;
+              line-height: var(--height);
+              letter-spacing: 1px;
+              margin: 30px;}
+       ul,li.navigation { list-style: none;}
+       #menu { width: 900px;}
+
+       #menu a {background-color: var(--grey);
+                color: var(--teal);
+                display: block;
+                padding: 10px;}
+
+       #menu li { display: block;
+                  float: left;
+                  width: 100px;}
+       h1 { color  : var(--blue);
+              font-family: var(--font);
+              font-size: 3rem;
+              line-height: 2.75rem;
+              letter-spacing: 1px;
+              margin: 30px 15px;}
+       thead {color : var(--teal);
+              font-family: var(--font);
+              font-size: 1.125rem;
+              line-height: var(--height);
+              letter-spacing: 1px;
+              margin: 30px;}
+       tbody {color : var(--grey);
+              font-family: var(--font);
+              font-size: 1rem;
+              line-height: var(--height);
+              letter-spacing: 1px;
+              margin: 30px;}
+       h2, h3, h4, h5 {color : var(--grey);
+                       font-family: var(--font);
+                       font-size: 1.5rem;
+                       font-style: italic;
+                       line-height: var(--height);
+                       text-decoration: underline;
+                       letter-spacing: 1px;
+                     margin: 30px 0px;}
+       ol li::marker {color : var(--teal);}
+       ul li::marker {color : var(--teal);
+                      font-size: .625rem}
+       b {color : var(--teal);
+              font-family: var(--font);}
+       p, ol, ul {font-family: var(--font);
+                  font-size: 1.125rem;
+                  line-height: var(--height);
+                  letter-spacing: 1px;
+                  margin: 5px;}
+       
+       .content > img {grid-area: pic;}
+       .content > h1 {grid-area: header;}
+       .content > p {grid-area: words;}
+       .content { display: grid;
+                  grid-template-columns: auto;
+                  grid-template-rows: auto;
+                  grid-template-areas:
+                  'header header header'
+                  'words words words'
+                  'pic pic pic';}
+       
+       .bottom {display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 100%;
+                align-items: center;
+                justify-items: center;}
+       
+       .filler > img {grid-area: pic;}
+       .filler > p.one {grid-area: pone;}
+       .filler > p.two {grid-area: ptwo;}
+       .filler > p.three {grid-area: pthree;}
+       .filler > p.four { grid-area: pfour;}
+       .filler {font-size: 1.5rem;}
+       .filler {display: grid;
+                 grid-template-areas: 
+                 '. pone pone pone'
+                 '. ptwo ptwo ptwo'
+                 '. pthree pthree pthree'
+                 '. pfour pfour pfour'
+                 '. . pic .';
+                 grid-template-columns: auto;
+                 grid-template-rows: auto;}
+       
+       
+       .education, .experience, .skills, .involvement {
+                                                       display: grid;
+                                                       justify-items: stretch;
+       }
+       .education > h2 {grid-area: header;}
+       .education > p.uni {grid-area: place;}
+       .education > p.date1 {grid-area: date;}
+       .education > ul {grid-area: desc;}
+       .education { display: grid;
+                 grid-template-areas: 
+                 'header header header'
+                 'place . date'
+                 'desc desc desc';
+                 grid-template-columns: auto;
+                 grid-template-rows: auto;
+                 justify-items: center;}
+       
+       .experience > h3 {grid-area: header;}
+       .experience > ol {grid-area: details;}
+       .experience {display: grid;
+                    grid-template-areas:
+                    'header header header'
+                    'details details details';
+                    grid-template-columns: auto;
+                    grid-template-rows: auto;
+                    justify-items: center;}
+       
+       .skills > h4 {grid-area: header;}
+       .skills > ul {grid-area: skills;}
+       .skills {display: grid;
+              grid-template-areas:
+              'header header header'
+              'skills skills skills';
+              grid-template-columns: auto;
+              grid-template-rows: auto;
+              justify-items: center;}
+       
+       .involvement > h5 {grid-area: header;}
+       .involvement > ul {grid-area: inv;}
+       .involvement {display: grid;
+                     grid-template-areas:
+                     'header header header'
+                     'inv inv inv';
+                     grid-template-columns: auto;
+                     grid-template-rows: auto;
+                     justify-items: center;}
+       
+       .contact > h1 {grid-area: header;}
+       .contact > img { grid-area: picture;}
+       .contact > h2,p {grid-area: phone;}
+       .contact > h3,p {grid-area: email;}
+       .contact { display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-template-rows: auto;
+                  grid-template-areas: 
+                  'header header header'
+                  '. picture .'
+                  'phone . email';
+                  justify-items: center;}
+       
+       .algebra > h2 {grid-area: header1;}
+       .algebra > img {grid-area: picture1;}
+       .algebra > p {grid-area: descr1;
+                     font-size: 1.375rem;}
+       .algebra > ul {grid-area: info1;}
+       .python > h3 {grid-area: header2;}
+       .python > img {grid-area: picture2;}
+       .python > p {grid-area: descr2;
+                    font-size: 1.375rem;}
+       .python > ul {grid-area: info2;}
+       .orientation > h4 {grid-area: header3;}
+       .orientation > img {grid-area: picture3;}
+       .orientation > p {grid-area: descr3;
+                         font-size: 1.375rem;}
+       .orientation > ul {grid-area: info3;}
+       .algebra { border: 0px solid #FFFFFF;
+                  display: grid;
+                  grid-template-columns: auto;
+                  grid-template-rows: auto;
+                  grid-template-areas: 
+                  'header1 header1 header1'
+                  'descr1 descr1 descr1'
+                  'info1 . picture1';}
+       .python { border: 0px solid #FFFFFF;
+                 display: grid;
+                 grid-template-columns: auto;
+                 grid-template-rows: auto;
+                 grid-template-areas:
+                 'header2 header2 header2'
+                 'descr2 descr2 descr2'
+                 'info2 . picture2';}
+       .orientation {border: 0px solid #FFFFFF;
+                     display: grid;
+                     grid-template-columns: auto;
+                     grid-template-rows: auto;
+                     grid-template-areas:
+                     'header3 header3 header3'
+                     'descr3 descr3 descr3'
+                     'info3 . picture3';}
+  }
