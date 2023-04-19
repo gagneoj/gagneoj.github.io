@@ -1,31 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
 html {
-    --teal: rgb(0, 128, 128);
+    --teal: rgb(0, 207, 165);
     --grey: rgb(54, 69, 79);
     --blue: rgb(51, 102, 153);
+    --softpurp: rgb(211, 211, 211);
     --font: 'Amiri Quran', serif;
     --height: 1.75rem;
 }
 
 body {
-       background-color: white;
+       background-color: var(--softpurp);
        font-family: var(--font);
 }
+
+img {
+       height: auto;
+       width: 100%;
+}
 .navigation {
-       display: inline-block;
+       background-color: var(--grey);
+       display: block;
        flex-flow: row nowrap;
        font-size: .875rem;
        line-height: var(--height);
        letter-spacing: 1px;
        margin: 30px;
+       width: 100%;
+       max-width: 1100px;
 }
 
 ul,li.navigation {
        list-style: none;
+       margin: 0px;
+       padding: 0px;
+       text-align: center;
+       width: 100%;
 }
 
 #menu {
-       width: 900px;
+       display: flex;
+       flex-flow: row nowrap;
+       font-size: 1rem;
+       width: 100%;
 }
 
 #menu a {
@@ -37,7 +53,6 @@ ul,li.navigation {
 
 #menu li {
        display: block;
-       float: left;
        width: 100px;
 }
 
@@ -49,20 +64,35 @@ h1 {
        margin: 30px 15px;
 }
 
-thead {
-       color: var(--teal);
-       font-size: 1.125rem;
-       line-height: var(--height);
-       letter-spacing: 1px;
-       margin: 30px;
-}
-
-tbody {
+.end > p.under1 {
+       color: var(--blue);
+       grid-area: tleft;}
+.end > p.under2 {
        color: var(--grey);
-       font-size: 1rem;
-       line-height: var(--height);
-       letter-spacing: 1px;
-       margin: 30px;
+       grid-area: bleft;}
+.end > p.work1 {
+       color: var(--blue);
+       grid-area: tcenter;}
+.end > p.work2 {
+       color: var(--grey);
+       grid-area: bcenter;}
+.end > p.location1 {
+       color: var(--blue);
+       grid-area: tright;}
+.end > p.location2 {
+       color: var(--grey);
+       grid-area: bright;}
+.end {
+       display: grid;
+       font-weight: bold;
+       grid-template-columns: repeat(6, .5fr);
+       grid-template-rows: auto;
+       grid-template-areas:
+       'tleft . . . tcenter . . . tright'
+       'bleft . . . bcenter . . . bright';
+       justify-content: space-between;
+       margin: auto;
+       text-align: center;
 }
 
 h2, h3, h4, h5 {
@@ -84,7 +114,7 @@ ul li::marker {
 }
 
 b {
-       color: var(--teal);
+       color: var(--blue);
 }
 
 p, ol, ul {
@@ -105,6 +135,7 @@ p, ol, ul {
        'header header header'
        'words words words'
        'pic pic pic';
+       margin: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -115,6 +146,8 @@ p, ol, ul {
        grid-template-areas: 
        'header header pic'
        'words words pic';
+       margin: auto;
+       max-width: 1100px;
 }
 }
 
@@ -152,6 +185,20 @@ p, ol, ul {
        grid-template-columns: auto;
        grid-template-rows: auto;
 }
+}
+
+.entire {
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 1100px;
+       text-align: center;
+}
+
+.entire > p,ol,ul {
+       font-size: 1.5rem;
+}
+.resume > h1 {
+       text-align: center;
 }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
@@ -309,4 +356,17 @@ p, ol, ul {
        'header3 header3 header3'
        'descr3 . picture3'
        'info3 . .';}
+}
+
+#btn {
+       background-color: var(--blue);
+       border: .2rem solid var(--grey);
+       display: grid;
+       font-weight: bold;
+       margin: auto;
+       padding: 5px;
+}
+
+.button {
+       margin: 30px;
 }
